@@ -186,6 +186,7 @@ code {
 
 pre {
   background-color: #FCF8F3;
+  overflow: auto;
 }
 
 a {
