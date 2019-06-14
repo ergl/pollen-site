@@ -121,6 +121,13 @@
     (li ,(l "/misc.html" "misc"))
     (li ,(l "/about.html" "about"))))
 
+; TODO(borja): Add CSS marker to current page
+; Using the here-path meta key we could figure out
+; where in the tree we are
+;
+; Other options is to user the pagetree to get parents,
+; or childs. For example, all would have "posts" as parent
+; whereas root pages would have #f as parent
 (define site-navigation `(header (nav ,site-sections)))
 
 ; The body of a page that will be redirected client-side
