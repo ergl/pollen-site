@@ -16,7 +16,14 @@
 ; TODO(borja): Clean this up
 
 (define site-name "Wrong opinions, all the time")
-(define site-description "Welcome to my blog / scratch note place.")        
+(define site-description "Welcome to my blog / scratch note place.")
+(define site-license
+  `(p "All posts licensed under a "
+      (a [(href "http://creativecommons.org/licenses/by-nc-sa/4.0/")
+          (target "_blank")
+          (rel "noopener")
+          (class "external")] "CC BY-NC-SA 4.0")
+      ". Code examples are, except otherwise noted, licensed under the MIT License."))
                        
 ; Append the title, date, and main title information
 ; to the main document with h1, h2, etc
