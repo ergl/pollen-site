@@ -28,7 +28,7 @@ Yes, this is a webring.
     If you can’t make yourself miserable trying to monetize it, it’s not a hobby.
 }
 
-◊blockquote[#:author "me, yesterday"]{
+◊blockquote[#:author "Paula and I on a sunny June afternoon"]{
     please give these portuguese geese
 
     some cheese and grease
