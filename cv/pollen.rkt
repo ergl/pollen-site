@@ -60,7 +60,7 @@
 
 (define-tag-function (class attrs elems)
   (let* ([hash-attrs (attrs->hash attrs)]
-         [start (hash-ref hash-attrs 'start)]         
+         [start (hash-ref hash-attrs 'start)]
          [end (hash-ref hash-attrs 'end #f)]
          [name (hash-ref hash-attrs 'name)]
          [place (hash-ref hash-attrs 'place)]
@@ -74,7 +74,7 @@
   (let* ([hash-attrs (attrs->hash attrs)]
          [level (hash-ref hash-attrs 'level)])
     `(@ (em ,@elems) ,(format " (~a)" level))))
-  
+
 (define (emph . elements)
   (case (current-poly-target)
     [(txt) `("**" ,@elements "**")]

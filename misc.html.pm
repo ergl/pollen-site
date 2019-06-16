@@ -17,7 +17,7 @@ Yes, this is a webring.
 
     ◊li{◊l["https://wiki.xxiivv.com/" #:ext #t]{xxiivv.com}}
 
-    ◊li{◊l["http://ayekat.ch/" #:ext #t]{ayekat.ch}}    
+    ◊li{◊l["http://ayekat.ch/" #:ext #t]{ayekat.ch}}
 }
 
 ◊h3{Random quotes}
@@ -30,9 +30,9 @@ Yes, this is a webring.
 
 ◊blockquote[#:author "me, yesterday"]{
     please give these portuguese geese
-    
+
     some cheese and grease
-    
+
     chinese bees lease the trees
 }
 

@@ -24,7 +24,7 @@
           (rel "noopener")
           (class "external")] "CC BY-NC-SA 4.0")
       ". Code examples are, except otherwise noted, licensed under the MIT License."))
-                       
+
 ; Append the title, date, and main title information
 ; to the main document with h1, h2, etc
 ;
@@ -56,8 +56,8 @@
   (footnotes:add-to-doc (txexpr 'div empty (decode-elements elements
                                       #:txexpr-elements-proc
                                       (lambda (el) (decode-paragraphs el #:linebreak-proc identity))))))
-                                                            
-                                                                                
+
+
 ; If the metas define a canonical url, insert it into the document
 ; as a meta attribute
 (define (canonicalize metas)

@@ -37,7 +37,7 @@ Here, we increment all values in a list, and then compute the sum of all the ele
 
 ```
 sum (map inc [1..10])
-     ---------------   
+     ---------------
        |
        V
 sum [2..11]
@@ -130,8 +130,8 @@ Given that we have composed the old functions into a new one, we can remove `S2`
 
 ```
  (map inc) ∘ (filter even)
-           |           
-           V           
+           |
+           V
 S1 -----------------> S3
 ```
 
@@ -150,8 +150,8 @@ What would happen if we applied our optimization in a disconnected node, and dis
 
 ```
         (map inc) ∘ (filter even)
-                  |           
-                  V         
+                  |
+                  V
 (Node 1):  S1 ------------> S3
                   S2
                    ^

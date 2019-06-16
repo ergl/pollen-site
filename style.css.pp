@@ -74,7 +74,6 @@ body {
   line-height: 1.6;
   ◊; TODO(borja): should do left + hyphenation
   text-align: justify;
-  
 }
 
 header {

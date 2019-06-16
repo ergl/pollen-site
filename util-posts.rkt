@@ -62,6 +62,6 @@
              (em ([class "post-entry-date"]) ,(format " (~a)" (select 'published meta))))))
     (txexpr (get-tag post-elt) (get-attrs post-elt) `(,@(get-elements post-elt)
                                                       ,(when/splice entry-descr `(p ([class "post-entry-descr"]) ,entry-descr)))))
-            
+
 
   (map render-post (sort-by-date (all-metas path))))
