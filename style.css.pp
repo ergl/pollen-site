@@ -57,10 +57,14 @@
 
 ◊;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+html {
+  font-size: 100%;
+}
+
 html, body {
   padding: 0.5em;
   margin: auto;
-  max-width: 45em;
+  max-width: 42em;
 }
 
 ◊(define font-size 1.2)
@@ -71,9 +75,9 @@ body {
   color: ◊|font-color|;
   background: ◊|background-color|;
   font: ◊|font-size|em Palatino, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   ◊; TODO(borja): should do left + hyphenation
-  text-align: justify;
+  text-align: left;
 }
 
 header {
