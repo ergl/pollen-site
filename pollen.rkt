@@ -104,6 +104,13 @@
           (format "~a — ~a" title site-name)
           site-name)))
 
+; If the document has a description meta, use that, otherwise
+; use the default site-wide description
+(define (doc-description metas)
+  (define description (select 'description metas))
+  (if description description
+                  site-description))
+
 ; Simple blockquote structure. The author is added at the end
 ; with a simple em dash and a hair space
 (define (blockquote #:author [author #f] . contents)
