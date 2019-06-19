@@ -1,9 +1,14 @@
+◊(define page-title (doc-title metas))
+
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="◊|page-title|"/>
+<meta property="og:description" content="◊|site-description|"/>
+<meta property="og:type" content="website"/>
+<title>◊|page-title|</title>
 <link rel="stylesheet" href="/style.css">
-<title>◊(doc-title metas)</title>
 ◊(canonicalize metas)
 ◊(maybe-redirect metas)
 ◊;◊(maybe-import-highlight)
