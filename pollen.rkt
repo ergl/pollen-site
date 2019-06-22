@@ -153,6 +153,13 @@
 
 (module setup racket/base
   (provide (all-defined-out))
+  (require racket)
   ; Drafts live in drafts/
-  (define omitted-path? (lambda (path)
-                          (string=? (path->string path) "drafts"))))
+  (define omitted-path?
+    (lambda (path)
+      (define strpath (path->string path))
+      (or
+        (string-contains? strpath "drafts")
+        (string-contains? strpath "template")
+        (string-suffix? strpath "LICENSE")
+        (string-suffix? strpath "~")))))
