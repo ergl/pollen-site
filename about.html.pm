@@ -37,5 +37,7 @@ Here's a sample of projects I've done and collaborated in:
 ◊h2{About this site}
 
 This site is written and published using ◊l["https://docs.racket-lang.org/pollen/"]{Pollen}.
+It also does not allow comments, but if you want to discuss anything, shoot me an ◊l["mailto:borjaocook@gmail.com"]{email},
+or text me on ◊l["http://t.me/king_of_manlets" #:ext #t]{Telegram}.
 
 ◊|site-license|

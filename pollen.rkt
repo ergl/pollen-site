@@ -30,10 +30,7 @@
 ;
 ; TODO(borja): Clean this up, I realized I have no idea
 ; of how txexpr works
-; TODO(borja): Create a new one for posts only, don't put
-; site title on it, just a simple navigation (home, about, etc)
 (define (build-document doc metas)
-  (define main-title (l "/" site-name))
   (define title (select 'title metas))
   (define date (select 'published metas))
 
@@ -44,10 +41,6 @@
   (define with-title (if title
                          `(div (h2 ,title) ,@(get-elements with-date))
                          with-date))
-
-  (define with-main-title `(div
-                            (header (h1 ,main-title))
-                            (article ,@(get-elements with-title))))
 
   (txexpr 'div empty (get-elements with-title)))
 

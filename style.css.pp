@@ -76,7 +76,7 @@ body {
   background: ◊|background-color|;
   font: ◊|font-size|em Palatino, sans-serif;
   line-height: 1.4;
-  ◊; TODO(borja): should do left + hyphenation
+  ◊; TODO(borja): should add smart hyphenation
   text-align: left;
 }
 
