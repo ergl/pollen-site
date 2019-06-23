@@ -42,7 +42,7 @@
                          `(div (h2 ,title) ,@(get-elements with-date))
                          with-date))
 
-  (txexpr 'div empty (get-elements with-title)))
+  (txexpr 'div '[(id "pcontainer")] (get-elements with-title)))
 
 
 (define (root . elements)
@@ -160,6 +160,7 @@
       (define strpath (path->string path))
       (or
         (string-contains? strpath "drafts")
+        (string-contains? strpath "secret")
         (string-contains? strpath "template")
         (string-suffix? strpath "LICENSE")
         (string-suffix? strpath "~")))))

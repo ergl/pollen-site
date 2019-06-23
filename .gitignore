@@ -3,6 +3,7 @@
 *.pdf
 *.ltx
 drafts/
+secret/*_secret.html.pm
 
 ### Racket ###
 # gitignore template for the Racket language
