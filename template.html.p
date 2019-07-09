@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head prefix="og: http://ogp.me/ns#">
-<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta property="og:title" content="◊|page-title|"/>
 <meta property="og:description" content="◊|page-description|"/>
 <meta property="og:type" content="website"/>

@@ -20,6 +20,4 @@
   `(sup (a ([href ,target-href] [id ,src-id] [class "footnote-forwardlink"]) ,(format "~a" note-number))))
 
 (define (add-to-doc tx)
-  (txexpr (get-tag tx) (get-attrs tx) `(,@(get-elements tx) ,(when/splice (not (empty? footnote-list)) `(hr) `(h3 "Notes"))
-                                                            ,@footnote-list)))
-
+  (txexpr (get-tag tx) (get-attrs tx) `(,@(get-elements tx) ,(when/splice (not (empty? footnote-list)) `(hr) `(h3 "Notes")) ,@footnote-list)))

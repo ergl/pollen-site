@@ -6,3 +6,4 @@
 
 ; Don't reveal article name on metas
 (define draft-title (format "~a — ~a" "Secrets" site-name))
+(define draft-description ":^)")
