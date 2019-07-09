@@ -34,10 +34,14 @@
            first-letter-size))
 
 @supports ◊|supports-initial-letter| {
-  .dropcap-wrap::first-letter {
+  .dropcap-wrap:first-letter {
     -webkit-initial-letter: ◊|first-letter-size|;
     initial-letter: ◊|first-letter-size|;
     color: ◊|first-letter-color|;
+  }
+
+  .dropcap {
+    margin-right: 0.15em;
   }
 }
 
@@ -46,6 +50,14 @@
     font-size: ◊|compat-first-letter-size|rem;
     line-height: 1rem;
     color: ◊|first-letter-color|;
+  }
+
+  .dropcap:before {
+    margin-bottom: -0.175em;
+  }
+
+  .dropcap:after {
+    margin-top: -0.05em;
   }
 
   ◊; The wrapper div around the letter needs some spacing
@@ -70,6 +82,7 @@ html, body {
 ◊(define font-size 1.2)
 ◊(define font-color "#333")
 ◊(define background-color "#FFFEFC")
+◊(define code-background-color "#F5F4F2")
 
 body {
   color: ◊|font-color|;
@@ -137,18 +150,18 @@ ul, ol {
 }
 
 a.footnote-backlink {
+  margin-left: 0.1em;
   font-size: 0.8em;
-  vertical-align: super;
 }
 
 a.footnote-forwardlink {
+  margin-left: 0.1em;
   font-size: 0.8em;
-  vertical-align: super;
 }
 
 ul.no-bullet {
   list-style-type: none;
-  marging-left: 0;
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -160,7 +173,7 @@ p.post-entry-link, p.post-entry-descr {
 
 p.post-entry-descr {
   font-size: 0.9em;
-  background-color: #FCF8F3
+  background-color: #FCF8F3;
 }
 
 p.post-entry-descr:before {

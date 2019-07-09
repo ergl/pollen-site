@@ -44,12 +44,17 @@
 
   (txexpr 'div '[(id "pcontainer")] (get-elements with-title)))
 
+; Break paragraphs on double enter, but don't break lines
+(define smart-paragraphs (lambda (el) (decode-paragraphs el #:linebreak-proc identity)))
+
+; Convert dashes to hyphens and quotes to smart quotes
+(define quotes-and-dashes (compose1 smart-quotes smart-dashes))
 
 (define (root . elements)
-  (footnotes:add-to-doc (txexpr 'div empty (decode-elements elements
-                                      #:txexpr-elements-proc
-                                      (lambda (el) (decode-paragraphs el #:linebreak-proc identity))))))
-
+  (footnotes:add-to-doc
+    (txexpr 'div empty
+      (decode-elements elements #:txexpr-elements-proc smart-paragraphs
+                                #:string-proc quotes-and-dashes))))
 
 ; If the metas define a canonical url, insert it into the document
 ; as a meta attribute
@@ -64,7 +69,6 @@
   (define rest (list->string (cdr word-list)))
   `(p [(class "dropcap-wrap")]
       (span [(class "dropcap")] ,first-letter) ,rest ,@paragraph))
-
 
 ; If the metas define a redirect-to url, create a client-side
 ; redirect, after redirect-to-secs seconds
