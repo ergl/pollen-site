@@ -198,6 +198,20 @@ blockquote footer {
 
 code {
   font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+  font-size: 0.8em;
+  background: ◊|code-background-color|;
+}
+
+code:before, code:after {
+  content: "`";
+}
+
+pre code {
+  background: inherit;
+}
+
+pre code:before, pre code:after {
+  content: "";
 }
 
 pre {
