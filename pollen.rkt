@@ -54,7 +54,8 @@
   (footnotes:add-to-doc
     (txexpr 'div empty
       (decode-elements elements #:txexpr-elements-proc smart-paragraphs
-                                #:string-proc quotes-and-dashes))))
+                                #:string-proc quotes-and-dashes
+                                #:exclude-tags '(code)))))
 
 ; If the metas define a canonical url, insert it into the document
 ; as a meta attribute
