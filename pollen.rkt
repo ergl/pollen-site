@@ -114,6 +114,9 @@
 (define (blockquote #:author [author #f] . contents)
   `(blockquote (p ,@contents) ,(when/splice author `(footer ,(format "—\u2006~a" author)))))
 
+(define (toggle #:title [header #f] . contents)
+  `(details ,(when/splice header `(summary ,header)) (div [(class "toggle-content")] (p ,@contents))))
+
 ; An html link. If #:ext is true, this link
 ; will open in a new tab
 (define (l addr #:ext [external #f] . contents)

@@ -36,3 +36,27 @@ Yes, this is a webring.
     chinese bees lease the trees
 }
 
+
+◊h3{Site TODOs}
+
+Things I'd like to add:
+
+◊toggle[#:title "list/table support"]{
+    The macro will accept a list/hashmap of values (tuples?) denoting each column.
+
+    Optionally, it will receive a list of header items.
+}
+
+◊toggle[#:title "self-contained post encryption"]{
+    We can use Racket's ◊code{read}/◊code{write} functions to ask the user for a password. When we want to password-protect a post, we could add a meta like so:
+
+    ◊pre{◊code{
+        ◊"◊"(define-meta locked #t)
+    }}
+
+    This would prompt pollen to ask us for a password. It will take the body, encrypt it, and embed the metadata in the ◊code{head} section so that javascript can decrypt it.
+}
+
+◊toggle[#:title "footer with git commit"]{
+    Use ◊code{git rev-parse --short HEAD}
+}

@@ -270,6 +270,12 @@ hr {
   border-right: 0;
 }
 
+.toggle-content {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #ddd;
+}
+
 ◊(define (media-between min max)
     (format "(min-device-width: ~apx) and (max-device-width: ~apx)" min max))
 
