@@ -117,6 +117,9 @@
 (define (toggle #:title [header #f] . contents)
   `(details ,(when/splice header `(summary ,header)) (div [(class "toggle-content")] (p ,@contents))))
 
+(define (right . contents)
+  `(div [(class "right-aligned")] (p ,@contents)))
+
 ; An html link. If #:ext is true, this link
 ; will open in a new tab
 (define (l addr #:ext [external #f] . contents)

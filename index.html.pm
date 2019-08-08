@@ -22,9 +22,11 @@ comments, or just general electronic banter.
 
 ◊hr[]
 
-◊h2{Latest Posts (◊em{◊l["/posts"]{See Archive}})}
+◊h2{Latest Posts}
 
 ◊(last-posts 5)
+
+◊right{◊l["/posts"]{See Archive}}
 
 ◊hr[]
 

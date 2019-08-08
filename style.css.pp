@@ -149,6 +149,10 @@ ul, ol {
   color: black;
 }
 
+.right-aligned {
+  text-align: right;
+}
+
 a.footnote-backlink {
   margin-left: 0.1em;
   font-size: 0.8em;
@@ -165,7 +169,7 @@ ul.no-bullet {
   padding-left: 0;
 }
 
-p.post-entry-link, p.post-entry-descr {
+p.post-entry-link {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom:0;
@@ -173,17 +177,13 @@ p.post-entry-link, p.post-entry-descr {
 
 p.post-entry-descr {
   font-size: 0.9em;
-  background-color: #FCF8F3;
+  margin-bottom: 2em;
 }
 
-p.post-entry-descr:before {
-  content: "";
-  margin-left: 2em;
-}
-
-em.post-entry-date {
-  font-size: 0.8em;
-  color: #9C9C9C;
+p.post-entry-date {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 blockquote {

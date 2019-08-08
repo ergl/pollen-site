@@ -58,8 +58,8 @@
     (define post-elt
     `(div ([class "post-entry"])
           (p ([class "post-entry-link"])
-             (a ((href ,(select '_output meta))) ,(select 'title meta))
-             (em ([class "post-entry-date"]) ,(format " (~a)" (select 'published meta))))))
+             (a ((href ,(select '_output meta))) ,(select 'title meta)))
+          (p ([class "post-entry-date"]) ,(format "~a" (select 'published meta)))))
     (txexpr (get-tag post-elt) (get-attrs post-elt) `(,@(get-elements post-elt)
                                                       ,(when/splice entry-descr `(p ([class "post-entry-descr"]) ,entry-descr)))))
 
