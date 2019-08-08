@@ -4,7 +4,7 @@ generate:
 	raco pollen render -s .
 
 server:
-	raco pollen start -l . 5555
+	raco pollen start . 5555
 
 reset:
 	raco pollen reset
