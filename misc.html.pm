@@ -13,7 +13,7 @@ Yes, this is a webring.
 
     ◊li{◊l["https://jfm.carcosa.net" #:ext #t]{jfm.carcosa.net}}
 
-    ◊li{◊l["https://agbalumo.co" #:ext #t]{agbalumo.co}}
+    ◊li{◊l["https://agbero.dev" #:ext #t]{agbero.dev}}
 
     ◊li{◊l["https://wiki.xxiivv.com/" #:ext #t]{xxiivv.com}}
 
