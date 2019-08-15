@@ -60,3 +60,10 @@ Things I'd like to add:
 ◊toggle[#:title "footer with git commit"]{
     Use ◊code{git rev-parse --short HEAD}
 }
+
+◊toggle[#:title "full text search"]{
+    For starters we can just use a {google,bing,duck}.com search redirect with
+    ◊code{site:our-site.com}. Another option is to use ◊l["https://lunrjs.com" #:ext #t]{◊code{lunrjs}}. We can ◊l["https://lunrjs.com/guides/index_prebuilding.html"]{pre-build} the page index and host a static ◊code{.json} file that we can use.
+
+    Disadvantages: uses javascript.
+}

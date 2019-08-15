@@ -10,7 +10,7 @@ out things I've worked on, just head over to the ◊l["/about.html"]{about} sect
 I try to write some opinions on the ◊l["/posts"]{blog} from time to time. As the
 title of the site implies, they're mostly wrong, ◊em{all} the time. Still, I hope you
 can find some of them useful. I also keep (or try to) a ◊l["/wiki"]{personal wiki},
-where I keep looser notes on books I read, articles I read, and even more opinions I might
+where I keep looser notes on books and articles I read, and even more opinions I might
 or might not have anymore.
 
 ◊; TODO(borja): insert link to "social media" category here?
