@@ -4,6 +4,7 @@
 
 Yes, this is a webring.
 
+◊; Remove most sites here, only add the ones I truly "follow"
 ◊ul{
     ◊li{◊l["http://tilde.club/~joeld/" #:ext #t]{tilde.club/~joeld}}
 
@@ -66,4 +67,12 @@ Things I'd like to add:
     ◊code{site:our-site.com}. Another option is to use ◊l["https://lunrjs.com" #:ext #t]{◊code{lunrjs}}. We can ◊l["https://lunrjs.com/guides/index_prebuilding.html"]{pre-build} the page index and host a static ◊code{.json} file that we can use.
 
     Disadvantages: uses javascript.
+}
+
+◊toggle[#:title "table of contents/sections"]{
+    Something like ◊code{◊"◊"|toc|} or a meta in the post to insert a table of contents at the beginning of a post. We can implement it with a ◊code{<details>} element, sorta like we already do for ◊code{◊"◊"toggle}.
+
+    To make it work, we have to also introduce a ◊code{section} and ◊code{subsection} tag that translates to ◊code{<h2>} and ◊code{<h3>}, plus a name target so we can link to it from the table of contents.
+
+    When pollen finds a ◊code{toc} tag, it will mark the whole tree so we can process it and insert the table during the ◊code{root} decoding step.
 }

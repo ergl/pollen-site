@@ -19,3 +19,4 @@ clean: reset
 	rm -r posts/*.html
 	rm -r secret/*.html
 	rm -r secret/*.css
+	rm -r drafts/*.html
