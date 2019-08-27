@@ -18,7 +18,7 @@
 (define site-name "Wrong opinions, all the time")
 (define site-description "Welcome to my blog / scratch note place.")
 (define site-license
-  `(p "All posts licensed under a "
+  `(p "All posts licensed under "
       (a [(href "http://creativecommons.org/licenses/by-nc-sa/4.0/")
           (target "_blank")
           (rel "noopener")
