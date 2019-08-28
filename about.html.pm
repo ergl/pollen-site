@@ -36,8 +36,8 @@ Here's a sample of projects I've done and collaborated in:
 
 ◊h2{About this site}
 
-This site is written and published using ◊l["https://docs.racket-lang.org/pollen/"]{Pollen}.
-It also does not allow comments, but if you want to discuss anything, shoot me an ◊l["mailto:borjaocook@gmail.com"]{email},
-or text me on ◊l["http://t.me/king_of_manlets" #:ext #t]{Telegram}.
+This site is written and published using ◊l["https://docs.racket-lang.org/pollen/"]{Pollen}. It also does not allow comments, but if you want to discuss anything, shoot me an ◊l["mailto:borjaocook@gmail.com"]{email}, or text me on ◊l["http://t.me/king_of_manlets" #:ext #t]{Telegram}.
+
+Many thanks to ◊l["https://thelocalyarn.com" #:ext #t]{Joel Dueck} for indirectly helping to create the ◊l[◊|atom-path|]{RSS feed} through his code. You can find the complete in the ◊l["https://github.com/ergl/pollen-site/blob/master/util-rss.rkt"]{github repo}.
 
 ◊|site-license|

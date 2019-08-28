@@ -10,6 +10,7 @@
 <meta property="og:description" content="◊|page-description|"/>
 <meta property="og:type" content="website"/>
 <title>◊|page-title|</title>
+<link rel="alternate" type="application/rss+xml" href="◊|atom-path|"/>
 <link rel="stylesheet" href="/style.css">
 ◊(canonicalize metas)
 ◊(maybe-redirect metas)

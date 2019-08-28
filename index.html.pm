@@ -20,6 +20,8 @@ However, feel free to reach out by ◊l["mailto:borjaocook@gmail.com"]{email} or
 ◊l["http://t.me/king_of_manlets" #:ext #t]{Telegram}, I'm always open to ideas,
 comments, or just general electronic banter.
 
+Feel free to ◊l[◊|atom-path|]{subscribe via RSS}.
+
 ◊hr[]
 
 ◊h2{Latest Posts}

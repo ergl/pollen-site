@@ -5,7 +5,7 @@
          pollen/cache
          pollen/file)
 
-(provide last-posts all-posts)
+(provide all-post-metas last-posts all-posts)
 
 (define (last-posts n [path "posts"])
   (define post-elements (all-post-elements path))
@@ -21,8 +21,7 @@
 
   `(ul ([class "no-bullet"]) ,@ils))
 
-(define (all-post-elements path)
-
+(define (all-post-metas path)
   ; Get all the paths to posts in the given folder path
   (define (all-post-paths posts-path)
     (define (valid-path path)
@@ -47,6 +46,9 @@
   (define (sort-by-date metas)
     (sort metas string>? #:key (lambda (m) (select 'published m))))
 
+  (sort-by-date (all-metas path)))
+
+(define (all-post-elements path)
   ; Convert a list of post metas into a list of HTML links
   (define (make-links-for metas)
     (define (make-link-for meta)
@@ -64,4 +66,4 @@
                                                       ,(when/splice entry-descr `(p ([class "post-entry-descr"]) ,entry-descr)))))
 
 
-  (map render-post (sort-by-date (all-metas path))))
+  (map render-post (all-post-metas path)))

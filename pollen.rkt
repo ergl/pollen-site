@@ -7,6 +7,7 @@
          racket/list
          racket/function
          (prefix-in footnotes: "util-footnotes.rkt")
+         (prefix-in rss: "util-rss.rkt")
          "util-posts.rkt")
 
 (provide (all-from-out "util-posts.rkt")
@@ -15,7 +16,10 @@
 
 ; TODO(borja): Clean this up
 
+(define atom-path "/atom.xml")
 (define site-name "Wrong opinions, all the time")
+(define site-author "Borja de Régil")
+(define site-url "ergl.github.io")
 (define site-description "Welcome to my blog / scratch note place.")
 (define site-license
   `(p "All posts licensed under "
@@ -137,7 +141,8 @@
     (li ,(l "/posts" "blog"))
     (li ,(l "/wiki/index.html" "wiki"))
     (li ,(l "/misc.html" "misc"))
-    (li ,(l "/about.html" "about"))))
+    (li ,(l "/about.html" "about"))
+    (li ,(l atom-path "rss"))))
 
 ; TODO(borja): Add CSS marker to current page
 ; Using the here-path meta key we could figure out
@@ -161,6 +166,11 @@
 (define (codeblock lang . contents)
   ;(set! needs-code-js #t)
   `(pre (code ([class ,(format "~a" lang)]) ,@contents)))
+
+(define (rss)
+  (rss:rss-feed site-name site-author
+                site-url site-description
+                "posts" atom-path all-post-metas))
 
 (module setup racket/base
   (provide (all-defined-out))

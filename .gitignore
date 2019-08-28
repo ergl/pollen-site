@@ -2,6 +2,7 @@
 *.css
 *.pdf
 *.ltx
+*.xml
 drafts/
 secret/*_secret.html.pm
 
