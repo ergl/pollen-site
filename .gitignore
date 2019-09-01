@@ -5,6 +5,7 @@
 *.xml
 drafts/
 secret/*_secret.html.pm
+CNAME
 
 ### Racket ###
 # gitignore template for the Racket language

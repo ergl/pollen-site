@@ -10,6 +10,7 @@ reset:
 	raco pollen reset
 
 clean: reset
+	rm -f CNAME
 	rm -f *.html
 	rm -f *.css
 	rm -rf cv/*.html
