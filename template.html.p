@@ -12,6 +12,7 @@
 <title>◊|page-title|</title>
 <link rel="alternate" type="application/rss+xml" href="◊|atom-path|"/>
 <link rel="stylesheet" href="/style.css">
+<link href=data:, rel=icon>
 ◊(canonicalize metas)
 ◊(maybe-redirect metas)
 ◊;◊(maybe-import-highlight)
