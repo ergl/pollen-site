@@ -93,12 +93,6 @@
     (->html `(meta ((http-equiv "refresh")
                     (content ,(format "~a;url=~a" secs url)))))))
 
-; Won't work since this is called from template,
-; and not during document creation
-#;(define (maybe-import-highlight)
-  (when needs-code-js
-    (->html `(script ([src "/path/to/lib.js"])))))
-
 ; If the document has a title meta, use that for the html title
 ; otherwise use the page title
 (define (doc-title metas)
@@ -167,11 +161,7 @@
       ,(format ". You can either follow the link, or wait ~a seconds to be automatically redirected"
                secs)))
 
-; TODO(borja): Add js to document only if this is true
-; See tutorial https://docs.racket-lang.org/pollen/mini-tutorial.html
-#;(define needs-code-js #f)
 (define (codeblock lang . contents)
-  ;(set! needs-code-js #t)
   `(pre (code ([class ,(format "~a" lang)]) ,@contents)))
 
 (define (rss)

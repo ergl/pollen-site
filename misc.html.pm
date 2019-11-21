@@ -68,3 +68,7 @@ Things I'd like to add:
 
     Disadvantages: uses javascript.
 }
+
+◊toggle[#:title "Syntax coloring"]{
+    Use some js library to add color to code blocks.
+}

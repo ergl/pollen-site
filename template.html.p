@@ -15,7 +15,6 @@
 <link href=data:, rel=icon>
 ◊(canonicalize metas)
 ◊(maybe-redirect metas)
-◊;◊(maybe-import-highlight)
 </head>
 <body>
 ◊(->html site-navigation)
