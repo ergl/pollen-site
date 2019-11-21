@@ -8,10 +8,13 @@
          racket/function
          (prefix-in footnotes: "util-footnotes.rkt")
          (prefix-in rss: "util-rss.rkt")
+         (prefix-in toc: "util-toc.rkt")
          "util-posts.rkt")
 
 (provide (all-from-out "util-posts.rkt")
          (rename-out [footnotes:note note])
+         (rename-out [toc:section tsection])
+         (rename-out [toc:subsection tsubsection])
          (all-defined-out))
 
 ; TODO(borja): Clean this up
@@ -55,11 +58,15 @@
 (define quotes-and-dashes (compose1 smart-quotes smart-dashes))
 
 (define (root . elements)
-  (footnotes:add-to-doc
-    (txexpr 'div empty
-      (decode-elements elements #:txexpr-elements-proc smart-paragraphs
-                                #:string-proc quotes-and-dashes
-                                #:exclude-tags '(code)))))
+  (define elem
+          (footnotes:add-to-doc
+            (txexpr 'div empty
+            (decode-elements elements #:txexpr-elements-proc smart-paragraphs
+                                      #:string-proc quotes-and-dashes
+                                      #:exclude-tags '(code)))))
+
+  (define enable-toc (select 'enable-toc (current-metas)))
+  (if enable-toc (toc:add-toc elem) elem))
 
 ; If the metas define a canonical url, insert it into the document
 ; as a meta attribute

@@ -276,6 +276,13 @@ hr {
   border-left: 1px solid #ddd;
 }
 
+#table-of-contents {
+  margin-left: 1em;
+  padding-left: 1rem;
+}
+
+.toc-s { margin: 0.5em; }
+
 ◊(define (media-between min max)
     (format "(min-device-width: ~apx) and (max-device-width: ~apx)" min max))
 
