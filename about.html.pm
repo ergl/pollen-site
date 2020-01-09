@@ -27,7 +27,7 @@ Here's a sample of projects I've done and collaborated in:
 
 ◊ul{
     ◊li{◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: An AP transactional database using CRDTs.}
-    ◊li{◊l["https://github.com/lasp-lang/lasp" #:ext #t]{Lasp}: A language and colleciton of Erlang libraries to build distributed systems.}
+    ◊li{◊l["https://github.com/lasp-lang/lasp" #:ext #t]{Lasp}: A language and collection of Erlang libraries to build distributed systems.}
     ◊li{◊l["https://github.com/ergl/pipesock" #:ext #t]{pipesock}: An Erlang TCP client that offers automatic batching and pipelining of messages across connections.}
     ◊li{◊l["https://github.com/ergl/crdt-ml" #:ext #t]{crdt-ml}: A collection of CRDTs in OCaml.}
     ◊li{◊l["https://github.com/ergl/pony-docset" #:ext #t]{pony-docset}: A ◊l["https://kapeli.com/dash" #:ext #t]{Dash} docset for the ◊l["https://www.ponylang.io/" #:ext #t]{Pony} programming language.}

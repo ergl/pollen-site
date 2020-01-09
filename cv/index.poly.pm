@@ -39,7 +39,7 @@ write unit test against streaming APIs.
 
 ◊section[#:title "Education"]{
 ◊ul{
-◊li{◊class[#:start "Class of 2020" #:name "B.S in Computer Science" #:place "Computense University of Madrid" #:location "Madrid"]{}}
+◊li{◊class[#:start "Class of 2020" #:name "B.S in Computer Science" #:place "Complutense University of Madrid" #:location "Madrid"]{}}
 }
 }
 
