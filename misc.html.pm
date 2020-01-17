@@ -72,3 +72,7 @@ Things I'd like to add:
 ◊toggle[#:title "Syntax coloring"]{
     Use some js library to add color to code blocks.
 }
+
+◊toggle[#:title "PDF CV"]{
+    Use ◊l["https://docs.racket-lang.org/quad/" #:ext $t]{quad}.
+}
