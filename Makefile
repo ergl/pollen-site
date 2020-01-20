@@ -2,6 +2,7 @@ all: generate
 
 generate:
 	raco pollen render -s .
+	raco pollen render -t pdf cv/index.poly.pm
 
 server:
 	raco pollen start . 5555

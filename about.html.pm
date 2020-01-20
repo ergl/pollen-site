@@ -4,9 +4,10 @@
 
 ◊h2{About me}
 
+◊; TODO(borja): Fit pdf CV to one page
 You thought I was going to tell you about my life? Well, maybe some other time.
 In the meantime, please enjoy my professional life detailed below, or check out
-◊l["/cv" #:ext #t]{my CV} (I'll code for money).
+◊l["/cv"]{my CV} (also in ◊l["/cv/index.pdf"]{pdf form}).
 
 ◊h3{Articles}
 
