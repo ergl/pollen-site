@@ -58,10 +58,6 @@ Things I'd like to add:
     This would prompt pollen to ask us for a password. It will take the body, encrypt it, and embed the metadata in the ◊code{head} section so that javascript can decrypt it.
 }
 
-◊toggle[#:title "footer with git commit"]{
-    Use ◊code{git rev-parse --short HEAD}
-}
-
 ◊toggle[#:title "full text search"]{
     For starters we can just use a {google,bing,duck}.com search redirect with
     ◊code{site:our-site.com}. Another option is to use ◊l["https://lunrjs.com" #:ext #t]{◊code{lunrjs}}. We can ◊l["https://lunrjs.com/guides/index_prebuilding.html"]{pre-build} the page index and host a static ◊code{.json} file that we can use.
@@ -71,4 +67,12 @@ Things I'd like to add:
 
 ◊toggle[#:title "Syntax coloring"]{
     Use some js library to add color to code blocks.
+}
+
+◊toggle[#:title "Self host fonts"]{
+    ◊l["https://rsms.me/inter/" #:ext #t]{Inter} looks cool. Pair with this ◊l["https://kevq.uk/how-to-self-host-your-web-fonts/" #:ext #t]{tutorial} to self-host the font files. The font also has nice features that will pair nicely with ◊l["https://docs.racket-lang.org/quad" #:ext #t]{quad}.
+}
+
+◊toggle[#:title "Add \"last updated\""]{
+    Add a "this page was last updated on XXX" to the about page
 }

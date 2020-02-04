@@ -8,6 +8,7 @@
 <meta property="og:type" content="article"/>
 <title>◊|draft-title|</title>
 <link rel="stylesheet" href="/style.css">
+<link href=data:, rel=icon>
 <script src="/scripts/sjcl.js"/></script>
 </head>
 <body>
