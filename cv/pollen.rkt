@@ -8,6 +8,11 @@
 
 (provide (all-defined-out) render-pdf)
 
+(define raw-pdf-font-size 12)
+(define pdf-font-size (format "~apt" raw-pdf-font-size))
+(define (pdf-adjust-font-size mult)
+  (format "~apt" (* raw-pdf-font-size mult)))
+
 (module setup racket/base
   (provide (all-defined-out))
   (define poly-targets '(html pdf)))
@@ -22,7 +27,7 @@
   (case (current-poly-target)
     [(pdf) `(q [(keep-first-lines "2")
                 (keep-last-lines "3")
-                (font-size-adjust "100%")
+                (font-size ,pdf-font-size)
                 (hyphenate "true")
                 (line-align "justify")]
               ,@elems ,para-break)]
@@ -31,12 +36,12 @@
 (define (heading . elements)
   (case (current-poly-target)
     [(pdf) `(q [(display "block")
-                       (font-size-adjust "200%")
-                       (inset-bottom "15")
-                       (keep-with-next "true")]
-                      ,page-break
-                      ,@elements
-                      ,para-break)]
+                (font-size ,(pdf-adjust-font-size 2))
+                (inset-bottom "15")
+                (keep-with-next "true")]
+                ,page-break
+                ,@elements
+                ,para-break)]
     [else (txexpr 'h2 empty elements)]))
 
 (define-tag-function (job attrs elements)
@@ -49,12 +54,16 @@
     (case (current-poly-target)
       [(pdf) `(q ,company
                  ,line-break
-                 (q [(font-size-adjust "90%") (font-italic "true")] ,position)
+                 (q [(font-size ,(pdf-adjust-font-size 0.9))
+                     (font-italic "true")]
+                     ,position)
                  ,line-break
-                 (q [(font-size-adjust "75%") (font-italic "true")] ,start-end)
+                 (q [(font-size ,(pdf-adjust-font-size 0.75))
+                     (font-italic "true")]
+                     ,start-end)
                  ,(when elements
                   `(q [(display "block")
-                       (font-size-adjust "100%")
+                       (font-size ,pdf-font-size)
                        (hyphenate "true")
                        (line-align "justify")
                        (inset-left "10")
@@ -105,14 +114,13 @@
     (case (current-poly-target)
       [(pdf) `(q ,(when title
                         `(q [(first-line-indent "0")
-                             (font-size-adjust "120%")
-                             (inset-top "10")
+                             (font-size ,(pdf-adjust-font-size 1.2))
                              (font-bold "true")
                              (keep-with-next "true")]
                              ,para-break
                              ,title
                              ,para-break))
-                  (q [(font-size-adjust "100%")] ,@elems ,para-break))]
+                  (q [(font-size ,pdf-font-size)] ,@elems ,para-break))]
       [else `(div ((class "section") ,(when id `(id ,id))) ,(when title `(h3 ,title)) ,@elems)])))
 
 (define-tag-function (class attrs elems)
@@ -126,11 +134,13 @@
     (case (current-poly-target)
       [(pdf) `(q ,name
                  ,line-break
-                 (q [(font-size-adjust "90%")]
+                 (q [(font-size ,(pdf-adjust-font-size 0.9))]
                     (q [(font-italic "true")] ,place)
                     ,(format ", ~a" location))
                   ,line-break
-                  (q [(font-size-adjust "75%") (font-italic "true")] ,start-end))]
+                  (q [(font-size ,(pdf-adjust-font-size 0.75))
+                      (font-italic "true")]
+                      ,start-end))]
       [else `(div [(class "education")]
                   (h4 ,name)
                   (h5 (em ,place) ", " ,location)
