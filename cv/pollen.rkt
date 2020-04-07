@@ -20,7 +20,10 @@
 (define (root . elements)
   (case (current-poly-target)
    [(pdf) `(q [(footer-display "false")
-               (page-size "a4")] ,@elements)]
+               (page-size "a4")
+               (page-margin-left "2.5cm")
+               (page-margin-right "2.5cm")]
+               ,@elements)]
    [else `(@ ,@elements)]))
 
 (define-tag-function (text attrs elems)
@@ -51,6 +54,7 @@
          [start (hash-ref hash-attrs 'start)]
          [end (hash-ref hash-attrs 'end #f)]
          [start-end (string-append start (if end (format "—~a" end) ""))])
+
     (case (current-poly-target)
       [(pdf) `(q ,company
                  ,line-break
@@ -71,6 +75,7 @@
                       ,para-break
                       ,@elements))
                     ,para-break)]
+
       [else `(div [(class "job")]
                   (h4 ,company)
                   (h5 (em ,position))
