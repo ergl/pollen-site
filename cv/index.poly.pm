@@ -53,6 +53,18 @@
     Co-designed and implemented a domain-specific language in Python that would let users write unit test against streaming APIs.}}
 }}
 
+◊section[#:title "Publications"]{◊itemize{◊item{
+    ◊publication[
+        #:title "Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages"
+        #:authors "Borja Arnau de Régil Basáñez, Christopher Meiklejohn"
+        #:date "2016"
+        #:link "http://arxiv.org/abs/1609.01068"
+        #:place "Amsterdam, Netherlands"
+        #:venue "AGERE 2016"
+        #:type "Workshop"
+        ]
+}}}
+
 ◊section[#:title "Education"]{◊itemize{◊item{
     ◊class[#:start "Class of 2020"
            #:name "B.S in Computer Science"

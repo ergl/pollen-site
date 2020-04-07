@@ -47,6 +47,38 @@
                 ,para-break)]
     [else (txexpr 'h2 empty elements)]))
 
+(define-tag-function (publication attrs elements)
+  (let* ([hash-attrs (attrs->hash attrs)]
+         [title (hash-ref hash-attrs 'title)]
+         [authors (hash-ref hash-attrs 'authors)]
+         [date (hash-ref hash-attrs 'date)]
+         [link (hash-ref hash-attrs 'link)]
+         [place (hash-ref hash-attrs 'place)]
+         [venue (hash-ref hash-attrs 'venue)]
+         [type (hash-ref hash-attrs 'type)])
+
+    (case (current-poly-target)
+      [(pdf) `(q
+                (q [(font-size ,(pdf-adjust-font-size 0.9))]
+                   ,type)
+                (q [(display "block")
+                    (font-size ,pdf-font-size)
+                    (hyphenate "true")]
+                  ,para-break
+                  ,(format "~a, " authors)
+                  (q [(font-italic "true")
+                      (font-size ,pdf-font-size)]
+                     ,(format " ~a. " title)))
+                  ,(format "~a. " venue)
+                  (q [(link ,link) (font-color "#EA5A5B")] ,link))]
+
+      [else `(div [(class "publication")]
+                (h5 ,type)
+                (p ,(format "~a," authors)
+                   (em ,(format " ~a." title))
+                   ,(format " ~a. " venue)
+                   (a [(href ,link)] ,link)))])))
+
 (define-tag-function (job attrs elements)
   (let* ([hash-attrs (attrs->hash attrs)]
          [position (hash-ref hash-attrs 'position)]
