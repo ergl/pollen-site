@@ -14,23 +14,24 @@
 
 ◊section{
     ◊text{
-        I am interested in distributed systems and the design of programming
-        languages, and how they affect the way we write and reason about programs.
+        I am interested in writing correct first, fast second distributed systems
+        and scalable peer-to-peer networks.
     }
 }
 
 ◊section[#:title "Areas of Interest"]{
     ◊itemize{
-        ◊item{Functional Programming}
-        ◊item{Type Systems}
+        ◊item{Distributed Systems}
+        ◊item{Databases}
         ◊item{Conflict-Free Replicated Data Types (CRDTs)}
     }
 }
 
 ◊section[#:title "Skills"]{
     ◊itemize{
-        ◊item{◊skill[#:level "Fluent"]{Erlang, Bash, Java, Python, Javascript (Node)}}
-        ◊item{◊skill[#:level "Familiar"]{C, OCaml, Clojure, Pony}}
+        ◊item{◊skill[#:level "Professional Experience"]{Erlang, Bash, Javascript (Node)}}
+        ◊item{◊skill[#:level "Fluent"]{Java, Python, Pony}}
+        ◊item{◊skill[#:level "Familiar"]{C, OCaml, Clojure, R}}
     }
 }
 
@@ -38,7 +39,14 @@
     ◊item{◊job[#:start "October 2016"
                #:end "Current"
                #:position "Research Intern"
-               #:company "Imdea Software Institute"]{}}
+               #:company "Imdea Software Institute"]{
+
+    Implemented and evaluated a new transactional protocol for strongly consistent
+    distributed databases; implemented a relational (SQL) model adapter for key-value
+    distributed storage; tested distributed programs via property checking (model
+    checking); implemented an open-source library for the batching and multiplexing of
+    TCP connections, which allowed to scale systems to handle up to 2.5 times more
+    requests per second.}}
 
     ◊item{◊job[#:start "Summer 2016"
                 #:company "Google Summer of Code"
