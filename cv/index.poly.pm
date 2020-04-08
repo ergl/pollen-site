@@ -14,7 +14,7 @@
 
 ◊section{
     ◊text{
-        I am interested in writing correct first, fast second distributed systems
+        I am interested in writing fast and correct distributed systems
         and scalable peer-to-peer networks.
     }
 }
