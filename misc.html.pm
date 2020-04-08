@@ -74,5 +74,13 @@ Things I'd like to add:
 }
 
 ◊toggle[#:title "Add \"last updated\""]{
-    Add a "this page was last updated on XXX" to the about page
+    Add a "this page was last updated on XXX" to the about page. An idea is to just
+    track the "about" page, or maybe the index. Do we want to add this to every
+    page? In any case, some ideas are to use git for this.
+
+    First: from racket, get the ◊l["https://stackoverflow.com/a/16843630" #:ext #t]{name of the file}; second, get the last commit that touched the file, and the date. The command looks something like:
+
+    ◊pre{
+        ◊code{git log -n 1 --pretty=format:%cD', ref '%H -- <file>}
+    }
 }
