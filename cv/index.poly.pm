@@ -14,7 +14,7 @@
 
 ◊section{
     ◊text{
-        I am interested in writing fast and correct distributed systems
+        I am interested in writing fast–and–correct distributed systems
         and scalable peer-to-peer networks.
     }
 }
@@ -44,7 +44,7 @@
     Implemented and evaluated a new transactional protocol for strongly consistent
     distributed databases; implemented a relational (SQL) model adapter for key-value
     distributed storage; tested distributed programs via property checking (model
-    checking); implemented an open-source library for the batching and multiplexing of
+    checking); implemented an open-source library for batching and multiplexing of
     TCP connections, which allowed to scale systems to handle up to 2.5 times more
     requests per second.}}
 
