@@ -84,3 +84,11 @@ Things I'd like to add:
         ◊code{git log -n 1 --pretty=format:%cD', ref '%H -- <file>}
     }
 }
+
+◊toggle[#:title "Series Ideas"]{
+    Borrowed from Joel's ◊em{The Local Yarn}, series are "categories on steroids",
+    that present the list of articles under the series in a different rendering,
+    with an (optional) introduction at the top.
+
+    In a particular piece, I can say "This piece is part of ...". Also, when browsing the pieces from a particular series, the snippet linking to the series should dissappear.
+}
