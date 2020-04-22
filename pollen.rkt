@@ -177,6 +177,15 @@
                 site-url site-description
                 "posts" atom-path all-post-metas))
 
+(define (label id contents)
+  (txexpr (get-tag contents)
+          (get-attrs contents)
+          `((a ([name ,(format "~a" id)]))
+            ,@(get-elements contents))))
+
+(define (ref id . contents)
+  `(a ([href ,(format "#~a" id)]) ,@contents))
+
 (module setup racket/base
   (provide (all-defined-out))
   (require racket)

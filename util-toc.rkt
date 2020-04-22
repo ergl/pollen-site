@@ -12,7 +12,7 @@
 (define subsection-counter 0)
 (define subsection-list empty)
 
-(define (section name)
+(define (section #:label [reference 'nil] name)
     ; Reset the subsection counter
     (set! subsection-counter 0)
 
@@ -20,35 +20,65 @@
     (define target-id (format "toc-s-~a" section-number))
     (define target-href (format "#toc-s-~a" section-number))
 
-    (set! section-list
-          (append section-list
-                  (list `(li ([class "toc-s"])
-                             (a ([href ,target-href] [class "toc-link"]) ,name)))))
+    (define link-content
+      `(li ([class "toc-s"])
+        (a ([href ,target-href] [class "toc-link"]) ,name)))
 
-    `(h2 ([id ,target-id]) ,name))
+    (define reference-name
+        (if (eq? reference 'nil) name reference))
 
-(define (subsection name)
+    (define entry (make-hash))
+    (hash-set! entry 'ref reference-name)
+    (hash-set! entry 'anchor target-href)
+    (hash-set! entry 'content link-content)
+
+    (set! section-list (append section-list (list entry)))
+
+    `(h2 ([id ,target-id])
+        (a ([name ,(format "~a" reference-name)]))
+        ,name))
+
+(define (subsection #:label [reference 'nil] name)
     (set! subsection-counter (+ 1 subsection-counter))
 
-    (define parent-number (length section-list))
-    (define target-id (format "toc-s-~a-~a" parent-number subsection-counter))
-    (define target-href (format "#toc-s-~a-~a" parent-number subsection-counter))
+    (define parent-number
+        (length section-list))
 
-    ; We add the content consed with the parent index so we can merge them with
-    ; the parent later (see next function).
-    (set! subsection-list
-          (append subsection-list
-                  (list (cons parent-number
-                              `(li ([class "toc-ss"])
-                                   (a ([href ,target-href] [class "toc-link"]) ,name))))))
+    (define parent-ref
+        (hash-ref (last section-list) 'ref))
 
-    `(h3 ([id ,target-id]) ,name))
+    (define target-id
+        (format "toc-s-~a-~a" parent-number subsection-counter))
 
-(define (subsections-for index)
-  (filter-map (lambda (elt) (if (= index (car elt))
-                                (cdr elt)
-                                #f))
-              subsection-list))
+    (define target-href
+        (format "#toc-s-~a-~a" parent-number subsection-counter))
+
+    (define link-content
+      `(li ([class "toc-ss"])
+        (a ([href ,target-href] [class "toc-link"]) ,name)))
+
+    (define reference-name
+        (if (eq? reference 'nil) name reference))
+
+    (define entry (make-hash))
+    (hash-set! entry 'ref reference-name)
+    (hash-set! entry 'parent-ref parent-ref)
+    (hash-set! entry 'anchor target-href)
+    (hash-set! entry 'content link-content)
+
+    (set! subsection-list (append subsection-list (list entry)))
+
+    `(h3 ([id ,target-id])
+        (a ([name ,(format "~a" reference-name)]))
+        ,name))
+
+(define (sublinks-for reference)
+  (filter-map
+    (lambda (elt)
+        (if (eq? reference (hash-ref elt 'parent-ref))
+            (hash-ref elt 'content)
+            #f))
+    subsection-list))
 
 (define (add-to-parent parent elems)
     (txexpr (get-tag parent)
@@ -59,16 +89,15 @@
 
 ; Go over the section list, and retrieve its subsections as we go
 (define (build-toc-elements)
-    (cdr (foldl (lambda (elt result)
-                (define idx (car result))
-                (define l-acc (cdr result))
-
-                (define subs (subsections-for idx))
-                (define new-alt (add-to-parent elt subs))
-
-                (cons (+ 1 idx) (append l-acc (list new-alt))))
-            (cons 1 empty)
-            section-list)))
+    (foldl
+        (lambda (elt acc)
+            (define ref (hash-ref elt 'ref))
+            (define content (hash-ref elt 'content))
+            (define sub-links (sublinks-for ref))
+            (define new-entry (add-to-parent content sub-links))
+            (append acc (list new-entry)))
+        empty
+        section-list))
 
 (define (add-toc tx)
     (define toc-elems (build-toc-elements))
