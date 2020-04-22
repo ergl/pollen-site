@@ -92,3 +92,9 @@ Things I'd like to add:
 
     In a particular piece, I can say "This piece is part of ...". Also, when browsing the pieces from a particular series, the snippet linking to the series should dissappear.
 }
+
+◊toggle[#:title "Add (code) callouts"]{
+    Borrowed from Asciidoc's ◊l["https://asciidoctor.org/docs/asciidoc-writers-guide/#listing-and-source-code-blocks" #:ext #t]{code callouts}, we could also add something similar (either in code, or in any piece of code). Do something similar to what Joel suggests about ◊l["https://github.com/mbutterick/pollen-users/issues/27#issuecomment-578420503" #:ext #t]{links}, separating urls in separate tags.
+
+    For us, we could have a tag that inserts the callout number, in a similar style to what we do for footnotes. Another tag inserts the comment. We can also make the callout numbers ◊l["https://developer.mozilla.org/en-US/docs/Web/CSS/user-select" #:ext #t]{unselectable}.
+}
