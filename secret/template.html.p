@@ -12,7 +12,6 @@
 <script src="/scripts/sjcl.js"/></script>
 </head>
 <body>
-◊(->html site-navigation)
 ◊(->html (build-document doc metas))
 </body>
 </html>

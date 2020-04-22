@@ -17,7 +17,6 @@
 ◊(maybe-redirect metas)
 </head>
 <body>
-◊(->html site-navigation)
 ◊(->html (build-document doc metas))
 </body>
 </html>

@@ -40,16 +40,24 @@
 (define (build-document doc metas)
   (define title (select 'title metas))
   (define date (select 'published metas))
+  (define disable-nav (select 'disable-nav metas))
 
-  (define with-date (if date
-                        `(div (h3 ,date) ,@(get-elements doc))
-                        doc))
+  (define with-date
+    (if date
+      `(div (h3 ,date) ,@(get-elements doc))
+      doc))
 
-  (define with-title (if title
-                         `(div (h2 ,title) ,@(get-elements with-date))
-                         with-date))
+  (define with-title
+    (if title
+      `(div (h2 ,title)
+        ,@(get-elements with-date))
+      with-date))
 
-  (txexpr 'div '[(id "pcontainer")] (get-elements with-title)))
+  (txexpr 'div '[(id "pcontainer")]
+    (if disable-nav
+      (get-elements with-title)
+      `(,site-navigation
+        ,@(get-elements with-title)))))
 
 ; Break paragraphs on double enter, but don't break lines
 (define smart-paragraphs (lambda (el) (decode-paragraphs el #:linebreak-proc identity)))
