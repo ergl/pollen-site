@@ -270,6 +270,10 @@ hr {
   border-right: 0;
 }
 
+details > summary {
+  cursor: pointer;
+}
+
 .toggle-content {
   margin-left: 1em;
   padding-left: 1em;
