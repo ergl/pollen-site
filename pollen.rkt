@@ -49,7 +49,7 @@
 
   (define with-title
     (if title
-      `(div (h2 ,title)
+      `(div (h1 ,title)
         ,@(get-elements with-date))
       with-date))
 
