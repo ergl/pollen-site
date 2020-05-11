@@ -14,7 +14,7 @@
 
 ◊section{
     ◊text{
-        I am interested in writing fast–and–correct distributed systems
+        I am interested in writing fast and correct distributed systems,
         and scalable peer-to-peer networks.
     }
 }
@@ -36,8 +36,14 @@
 }
 
 ◊section[#:id "jobs" #:title "Previous Experience"]{◊itemize{
-    ◊item{◊job[#:start "October 2016"
+    ◊item{◊job[#:start "June 2020"
                #:end "Current"
+               #:position "Distributed systems programmer"
+               #:company "Imdea Software Institute"]{
+    The work is funded by an ERC grant "A Rigorous Approach to Consistency in Cloud Databases".}}
+
+    ◊item{◊job[#:start "October 2016"
+               #:end "May 2020"
                #:position "Research Intern"
                #:company "Imdea Software Institute"]{
 
@@ -46,7 +52,9 @@
     distributed storage; tested distributed programs via property checking (model
     checking); implemented an open-source library for batching and multiplexing of
     TCP connections, which allowed to scale systems to handle up to 2.5 times more
-    requests per second.}}
+    requests per second.
+
+    The work was funded by an ERC grant "A Rigorous Approach to Consistency in Cloud Databases".}}
 
     ◊item{◊job[#:start "Summer 2016"
                 #:company "Google Summer of Code"
@@ -75,7 +83,7 @@
 
 ◊section[#:title "Education"]{◊itemize{◊item{
     ◊class[#:start "Class of 2020"
-           #:name "B.S in Computer Science"
+           #:name "B.S. in Computer Science"
            #:place "Complutense University of Madrid"
            #:location "Madrid"]{}
 }}}

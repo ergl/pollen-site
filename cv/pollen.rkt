@@ -45,7 +45,7 @@
                 ,page-break
                 ,@elements
                 ,para-break)]
-    [else (txexpr 'h2 empty elements)]))
+    [else `(h2 [] (a [(href "/") (id "heading-link")] ,@elements))]))
 
 (define-tag-function (publication attrs elements)
   (let* ([hash-attrs (attrs->hash attrs)]

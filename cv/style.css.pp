@@ -34,6 +34,15 @@ ul {
     padding-left: 0;
 }
 
+#heading-link {
+    color: black;
+    text-decoration: none;
+}
+
+#heading-link:hover {
+    color: black;
+    text-decoration: underline;
+}
 
 a {
     color: RGBA(219, 93, 107, 1.00);
