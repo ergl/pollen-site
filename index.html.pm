@@ -2,9 +2,9 @@
 
 ◊h2{Hi!}
 
-I'm Borja de Régil. I'm currently a research intern at the
+I'm Borja de Régil. I'm currently a research engineer at the
 ◊l["https://software.imdea.org" #:ext #t]{IMDEA Software Institute} working on
-cool dist-sys things. If for some reason you wish to know more, or want to check
+cool dist-sys things. If you wish to know more, or want to check
 out things I've worked on, just head over to the ◊l["/about.html"]{about} section.
 
 I try to write some opinions on the ◊l["/posts"]{blog} from time to time. As the
