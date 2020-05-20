@@ -6,10 +6,13 @@
 (provide note
          add-to-doc)
 
-; A list that will contain all footnotes for the current document
-(define footnote-list empty)
+; A hash-table of footnotes, one entry per document
+(define footnotes (make-hash))
 
 (define (note . contents)
+  (define doc-key (select-from-metas 'here-path (current-metas)))
+  ; If there's no entry, add a new list for our footnotes
+  (define footnote-list (hash-ref! footnotes doc-key empty))
   (define note-number (+ 1 (length footnote-list)))
   (define target-id (format "fn-~a" note-number))
   (define target-href (format "#fn-~a" note-number))
@@ -18,16 +21,18 @@
 
   ; Append to the footnote list
   ; We'll get back to it when we build the entire document
-  (set! footnote-list
-        (append footnote-list
-                (list `(p ([id ,target-id])
-                          ,(format "~a. " note-number)
-                          ,@contents
-                          (a ([href ,src-href] [class "footnote-backlink"]) "↩")))))
+  (hash-set! footnotes doc-key
+    (append footnote-list
+      (list `(p ([id ,target-id])
+                ,(format "~a. " note-number)
+                ,@contents
+                (a ([href ,src-href] [class "footnote-backlink"]) "↩")))))
 
   `(sup (a ([href ,target-href] [id ,src-id] [class "footnote-forwardlink"]) ,(format "~a" note-number))))
 
 (define (add-to-doc tx)
+  (define doc-key (select-from-metas 'here-path (current-metas)))
+  (define footnote-list (hash-ref! footnotes doc-key empty))
   (txexpr (get-tag tx)
           (get-attrs tx)
           `(,@(get-elements tx)
