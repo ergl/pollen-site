@@ -182,7 +182,7 @@ S4 ------
   map square
 }
 
-We are able to do this because, when we removed ◊code{S2}, we stored the original functions ◊code{map inc} and ◊code{filter even}
+We are able to do this since we stored the original functions ◊code{map inc} and ◊code{filter even} when we removed ◊code{S2}.
 
 Can this lead to inconsistencies? What if ◊code{S4} read from ◊code{S2}, instead of writing to it? Wouldn't it read old data? Lasp sidesteps this issue by implementing all its variables with special data types called Conflict-Free Replicated Data Types, or CRDTs◊note{Christopher Meiklejohn has collected a great list of ◊l["https://christophermeiklejohn.com/crdt/2014/07/22/readings-in-crdts.html"]{links and information about CRDTs}.}, for short. One of the many properties these data types guarantee is that, no matter the order of updates on a particular instance, the final state will always be the same.
 
