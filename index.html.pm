@@ -7,11 +7,7 @@ I'm Borja de Régil. I'm currently a research engineer at the
 cool dist-sys things. If you wish to know more, or want to check
 out things I've worked on, just head over to the ◊l["/about.html"]{about} section.
 
-I try to write some opinions on the ◊l["/posts"]{blog} from time to time. As the
-title of the site implies, they're mostly wrong, ◊em{all} the time. Still, I hope you
-can find some of them useful. I also keep (or try to) a ◊l["/wiki"]{personal wiki},
-where I keep looser notes on books and articles I read, and even more opinions I might
-or might not have anymore.
+You can find some of my opinions on the rarely-updated ◊l["/posts"]{blog}. Opinions are mostly wrong ◊em{all} the time, but I hope you can find some of them useful. I also keep (or try to) a ◊l["/wiki"]{personal wiki}, where I keep looser notes on books and articles I read, and even more opinions I might or might not have anymore.
 
 ◊; TODO(borja): insert link to "social media" category here?
 I don't do much social media, but I do have a ◊l["https://github.com/ergl" #:ext #t]{Github account}.
@@ -22,14 +18,6 @@ comments, or just general electronic banter.
 
 Feel free to ◊l[◊|atom-path|]{subscribe via RSS}.
 
-◊hr[]
-
-◊h2{Latest Posts}
-
-◊(last-posts 5)
-
-◊right{◊l["/posts"]{See Archive}}
-
-◊hr[]
+◊br[]
 
 ◊|site-license|

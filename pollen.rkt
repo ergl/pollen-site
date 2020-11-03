@@ -20,7 +20,7 @@
 ; TODO(borja): Clean this up
 
 (define atom-path "/atom.xml")
-(define site-name "Wrong opinions, all the time")
+(define site-name "Borja de Régil")
 (define site-author "Borja de Régil")
 (define site-url "deregil.es")
 (define site-description "Welcome to my blog / scratch note place.")
