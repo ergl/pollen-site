@@ -9,31 +9,54 @@ You thought I was going to tell you about my life? Well, maybe some other time.
 In the meantime, please enjoy my professional life detailed below, or check out
 ◊l["/cv"]{my CV} (also in ◊l["/cv/index.pdf"]{pdf form}).
 
+◊h3{Code}
+
+Here's a sample of projects I've done and collaborated in:
+
+◊ul{
+    ◊li{
+        ◊l["https://github.com/ponylang/ponyc" #:ext #t]{The Pony programming language}: Pony is an open-source, object-oriented, actor-model, capabilities-secure, high-performance programming language.
+    }
+    ◊li{
+        ◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: An highly-available transactional database using CRDTs.
+    }
+    ◊li{
+        ◊l["https://github.com/lasp-lang/lasp" #:ext #t]{Lasp}: A programming language prototype and collection of Erlang libraries to build distributed systems.
+    }
+    ◊li{
+        ◊l["https://github.com/ergl/clojurebot" #:ext #t]{clojurebot}: A Telegram bot that acts as a Clojure REPL.
+    }
+    ◊li{
+        ◊l["https://github.com/ergl/crdt-ml" #:ext #t]{crdt-ml}: A collection of CRDTs in OCaml.
+    }
+    ◊li{
+        ◊l["https://github.com/ergl/pipesock" #:ext #t]{pipesock}: An Erlang TCP client that offers automatic batching and pipelining of messages across connections.
+    }
+    ◊li{
+        ◊l["https://github.com/ergl/pony-docset" #:ext #t]{pony-docset}: A ◊l["https://kapeli.com/dash" #:ext #t]{Dash} docset for ◊l["https://www.ponylang.io/" #:ext #t]{Pony}.
+    }
+    ◊li{
+        ◊l["https://github.com/Pysellus/pysellus" #:ext #t]{pysellus}: A Python library to monitor of data streams and perform tests against them.
+    }
+}
+
 ◊h3{Articles}
 
 ◊; TODO(borja): Add command for articles, see Chris' website
 ◊; http://christophermeiklejohn.com/publications.html
 ◊; for formatting ideas
 ◊ul{
-    ◊li{B. A. de R. Basáñez and C. S. Meiklejohn, "Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages",
-    Sep. 2016 (◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{arXiv:1609.01068}).
-
-    I gave a talk about it at ◊l["https://2016.splashcon.org/details/agere2016/3/Dynamic-Path-Contraction-for-Distributed-Dataflow-Languages" #:ext #t]{AGERE! 2016}.
+    ◊li{
+        Borja de Régil and Christopher S. Meiklejohn. Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages. Draft, published Sep 2016. ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{(preprint)}
     }
 }
 
-◊h3{Code}
-
-Here's a sample of projects I've done and collaborated in:
+◊h3{Talks}
 
 ◊ul{
-    ◊li{◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: An AP transactional database using CRDTs.}
-    ◊li{◊l["https://github.com/lasp-lang/lasp" #:ext #t]{Lasp}: A language and collection of Erlang libraries to build distributed systems.}
-    ◊li{◊l["https://github.com/ergl/pipesock" #:ext #t]{pipesock}: An Erlang TCP client that offers automatic batching and pipelining of messages across connections.}
-    ◊li{◊l["https://github.com/ergl/crdt-ml" #:ext #t]{crdt-ml}: A collection of CRDTs in OCaml.}
-    ◊li{◊l["https://github.com/ergl/pony-docset" #:ext #t]{pony-docset}: A ◊l["https://kapeli.com/dash" #:ext #t]{Dash} docset for the ◊l["https://www.ponylang.io/" #:ext #t]{Pony} programming language.}
-    ◊li{◊l["https://github.com/ergl/clojurebot" #:ext #t]{clojurebot}: A Clojure REPL bot for Telegram Messenger.}
-    ◊li{◊l["https://github.com/Pysellus/pysellus" #:ext #t]{pysellus}: A little DSL and Python library to test and monitor data streams.}
+    ◊li{
+        AGERE 2016, colocated with SPLASH 2016: Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages. ◊l["https://2016.splashcon.org/details/agere2016/3/Dynamic-Path-Contraction-for-Distributed-Dataflow-Languages" #:ext #t]{(link)}
+    }
 }
 
 ◊h2{About this site}
