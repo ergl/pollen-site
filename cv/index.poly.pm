@@ -6,16 +6,15 @@
     ◊itemize{◊item{
         ◊itemize{
             ◊item{◊email{borjaocook@gmail.com}}
+            ◊item{◊link[#:addr "https://deregil.es"]{deregil.es}}
             ◊item{◊link[#:addr "https://github.com/ergl"]{github.com/ergl}}
-            ◊item{◊link[#:addr "https://twitter.com/brocooks"]{@brocooks}}
         }
     }}
 }
 
 ◊section{
     ◊text{
-        I am interested in writing fast and correct distributed systems,
-        and scalable peer-to-peer networks.
+        I am interested in writing fast and correct distributed systems.
     }
 }
 
@@ -30,8 +29,8 @@
 ◊section[#:title "Skills"]{
     ◊itemize{
         ◊item{◊skill[#:level "Professional Experience"]{Erlang, Bash, Javascript (Node)}}
-        ◊item{◊skill[#:level "Fluent"]{Java, Python, Pony}}
-        ◊item{◊skill[#:level "Familiar"]{C, OCaml, Clojure, R}}
+        ◊item{◊skill[#:level "Fluent"]{C, Java, Python, Pony}}
+        ◊item{◊skill[#:level "Familiar"]{OCaml, Clojure, R}}
     }
 }
 
@@ -39,8 +38,7 @@
     ◊item{◊job[#:start "June 2020"
                #:end "Current"
                #:position "Distributed systems programmer"
-               #:company "Imdea Software Institute"]{
-    The work is funded by an ERC grant "A Rigorous Approach to Consistency in Cloud Databases".}}
+               #:company "Imdea Software Institute"]{}}
 
     ◊item{◊job[#:start "October 2016"
                #:end "May 2020"
@@ -50,11 +48,11 @@
     Implemented and evaluated a new transactional protocol for strongly consistent
     distributed databases; implemented a relational (SQL) model adapter for key-value
     distributed storage; tested distributed programs via property checking (model
-    checking); implemented an open-source library for batching and multiplexing of
+    checking); implemented an open-source library for batching and multiplexing
     TCP connections, which allowed to scale systems to handle up to 2.5 times more
     requests per second.
 
-    The work was funded by an ERC grant "A Rigorous Approach to Consistency in Cloud Databases".}}
+    The work was funded by an ERC grant ◊em{A Rigorous Approach to Consistency in Cloud Databases}.}}
 
     ◊item{◊job[#:start "Summer 2016"
                 #:company "Google Summer of Code"

@@ -1,25 +1,25 @@
 #lang pollen
 
-◊h3{Other sites}
+◊; ◊h3{Other sites}
 
-Yes, this is a webring.
+◊; Yes, this is a webring.
 
 ◊; Remove most sites here, only add the ones I truly "follow"
-◊ul{
-    ◊li{◊l["http://tilde.club/~joeld/" #:ext #t]{tilde.club/~joeld}}
+◊; ◊ul{
+◊;     ◊li{◊l["http://tilde.club/~joeld/" #:ext #t]{tilde.club/~joeld}}
 
-    ◊li{◊l["https://flowing.systems" #:ext #t]{flowing.systems}}
+◊;     ◊li{◊l["https://flowing.systems" #:ext #t]{flowing.systems}}
 
-    ◊li{◊l["https://christine.website/" #:ext #t]{christine.website}}
+◊;     ◊li{◊l["https://christine.website/" #:ext #t]{christine.website}}
 
-    ◊li{◊l["https://jfm.carcosa.net" #:ext #t]{jfm.carcosa.net}}
+◊;     ◊li{◊l["https://jfm.carcosa.net" #:ext #t]{jfm.carcosa.net}}
 
-    ◊li{◊l["https://agbero.dev" #:ext #t]{agbero.dev}}
+◊;     ◊li{◊l["https://agbero.dev" #:ext #t]{agbero.dev}}
 
-    ◊li{◊l["https://wiki.xxiivv.com/" #:ext #t]{xxiivv.com}}
+◊;     ◊li{◊l["https://wiki.xxiivv.com/" #:ext #t]{xxiivv.com}}
 
-    ◊li{◊l["http://ayekat.ch/" #:ext #t]{ayekat.ch}}
-}
+◊;     ◊li{◊l["http://ayekat.ch/" #:ext #t]{ayekat.ch}}
+◊; }
 
 ◊h3{Random quotes}
 

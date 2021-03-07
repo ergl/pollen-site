@@ -183,6 +183,11 @@
                   (h5 (em ,place) ", " ,location)
                   (h6 ,start-end))])))
 
+(define (em . elements)
+  (case (current-poly-target)
+    [(pdf) `(q [(font-italic "true")] ,@elements)]
+    [else `(em ,@elements)]))
+
 (define-tag-function (language attrs elems)
   (let* ([hash-attrs (attrs->hash attrs)]
          [level (hash-ref hash-attrs 'level)])
