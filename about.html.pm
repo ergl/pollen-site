@@ -18,7 +18,7 @@ Here's a sample of projects I've done and collaborated in:
         ◊l["https://github.com/ponylang/ponyc" #:ext #t]{The Pony programming language}: Pony is an open-source, object-oriented, actor-model, capabilities-secure, high-performance programming language.
     }
     ◊li{
-        ◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: An highly-available transactional database using CRDTs.
+        ◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: A highly-available transactional database using ◊l["https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type" #:ext #t]{CRDTs}.
     }
     ◊li{
         ◊l["https://github.com/lasp-lang/lasp" #:ext #t]{Lasp}: A programming language prototype and collection of Erlang libraries to build distributed systems.
