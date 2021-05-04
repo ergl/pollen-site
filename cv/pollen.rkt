@@ -52,8 +52,8 @@
          [title (hash-ref hash-attrs 'title)]
          [authors (hash-ref hash-attrs 'authors)]
          [date (hash-ref hash-attrs 'date)]
-         [link (hash-ref hash-attrs 'link)]
-         [place (hash-ref hash-attrs 'place)]
+         [link (hash-ref hash-attrs 'link "")]
+         [place (hash-ref hash-attrs 'place "")]
          [venue (hash-ref hash-attrs 'venue)]
          [type (hash-ref hash-attrs 'type)])
 
@@ -70,14 +70,19 @@
                       (font-size ,pdf-font-size)]
                      ,(format " ~a. " title)))
                   ,(format "~a. " venue)
-                  (q [(link ,link) (font-color "#EA5A5B")] ,link))]
+                  ,(if (not (eq? link ""))
+                    `(q [(link ,link) (font-color "#EA5A5B")] ,link)
+                    `(q ""))
+                  ,para-break)]
 
       [else `(div [(class "publication")]
                 (h5 ,type)
                 (p ,(format "~a," authors)
                    (em ,(format " ~a." title))
                    ,(format " ~a. " venue)
-                   (a [(href ,link)] ,link)))])))
+                   ,(if (not (eq? link ""))
+                      `(a [(href ,link)] ,link)
+                      `"")))])))
 
 (define-tag-function (job attrs elements)
   (let* ([hash-attrs (attrs->hash attrs)]

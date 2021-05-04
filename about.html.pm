@@ -40,14 +40,17 @@ Here's a sample of projects I've done and collaborated in:
     }
 }
 
-◊h3{Articles}
+◊h3{Publications}
 
 ◊; TODO(borja): Add command for articles, see Chris' website
 ◊; http://christophermeiklejohn.com/publications.html
 ◊; for formatting ideas
 ◊ul{
     ◊li{
-        Borja de Régil and Christopher S. Meiklejohn. Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages. Draft, published Sep 2016. ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{(preprint)}
+        Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei. ◊strong{UniStore: A fault-tolerant marriage of causal and strong consistency}. USENIX ATC '21. To appear.
+    }
+    ◊li{
+        Borja de Régil and Christopher S. Meiklejohn. ◊strong{Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages}. Draft, published Sep 2016. ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{(preprint)}
     }
 }
 
