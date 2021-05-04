@@ -104,7 +104,7 @@
                      ,start-end)
                  ,(when elements
                   `(q [(display "block")
-                       (font-size ,pdf-font-size)
+                       (font-size ,(pdf-adjust-font-size 0.85))
                        (hyphenate "true")
                        (line-align "justify")
                        (inset-left "10")
