@@ -47,7 +47,7 @@ Here's a sample of projects I've done and collaborated in:
 ◊; for formatting ideas
 ◊ul{
     ◊li{
-        Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei. ◊strong{UniStore: A fault-tolerant marriage of causal and strong consistency}. USENIX ATC '21. To appear.
+        Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei. ◊strong{UniStore: A fault-tolerant marriage of causal and strong consistency}. USENIX ATC '21. To appear. ◊l["https://arxiv.org/abs/2106.00344" #:ext #t]{(preprint)}
     }
     ◊li{
         Borja de Régil and Christopher S. Meiklejohn. ◊strong{Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages}. Draft, published Sep 2016. ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{(preprint)}
