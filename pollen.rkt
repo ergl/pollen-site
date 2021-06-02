@@ -133,12 +133,11 @@
 (define (right . contents)
   `(div [(class "right-aligned")] (p ,@contents)))
 
-; An html link. If #:ext is true, this link
-; will open in a new tab
+; An html link. If #:ext is true, the mouse pointer will be different
 (define (l addr #:ext [external #f] . contents)
   (define attrs (if external
-                    `((href ,addr) (target "_blank") (rel "noopener") (class "external"))
-                    `((href ,addr))))
+    `((href ,addr) (class "external"))
+    `((href ,addr))))
   (if (empty? contents)
     `(a ,attrs ,addr)
     `(a ,attrs ,@contents)))
