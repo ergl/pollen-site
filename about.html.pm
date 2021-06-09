@@ -9,13 +9,14 @@ You thought I was going to tell you about my life? Well, maybe some other time.
 In the meantime, please enjoy my professional life detailed below, or check out
 ◊l["/cv"]{my CV} (also in ◊l["/cv/index.pdf"]{pdf form}).
 
-◊h3{Code}
-
-Here's a sample of projects I've done and collaborated in:
+◊h3{Open Source Projects}
 
 ◊ul{
     ◊li{
-        ◊l["https://github.com/ponylang/ponyc" #:ext #t]{The Pony programming language}: Pony is an open-source, object-oriented, actor-model, capabilities-secure, high-performance programming language.
+        ◊l["https://github.com/ponylang/ponyc" #:ext #t]{Pony}: An object-oriented, actor-model, capabilities-secure, high-performance programming language.
+    }
+    ◊li{
+        ◊l["https://github.com/ergl/pony-protobuf" #:ext #t]{pony-protobuf}: A Pony implementation and compiler of Google protocol buffers.
     }
     ◊li{
         ◊l["https://github.com/AntidoteDB/antidote" #:ext #t]{AntidoteDB}: A highly-available transactional database using ◊l["https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type" #:ext #t]{CRDTs}.
@@ -33,7 +34,7 @@ Here's a sample of projects I've done and collaborated in:
         ◊l["https://github.com/ergl/pipesock" #:ext #t]{pipesock}: An Erlang TCP client that offers automatic batching and pipelining of messages across connections.
     }
     ◊li{
-        ◊l["https://github.com/ergl/pony-docset" #:ext #t]{pony-docset}: A ◊l["https://kapeli.com/dash" #:ext #t]{Dash} docset for ◊l["https://www.ponylang.io/" #:ext #t]{Pony}.
+        ◊l["https://github.com/ergl/pony-docset" #:ext #t]{pony-docset}: A ◊l["https://kapeli.com/dash" #:ext #t]{Dash} docset for Pony.
     }
     ◊li{
         ◊l["https://github.com/Pysellus/pysellus" #:ext #t]{pysellus}: A Python library to monitor of data streams and perform tests against them.
