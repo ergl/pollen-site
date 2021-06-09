@@ -4,9 +4,13 @@
          pollen/setup
          pollen/tag
          pollen/decode
+         racket/function
          quadwriter)
 
 (provide (all-defined-out) render-pdf)
+
+(define smart-paragraphs (lambda (el) (decode-paragraphs el #:linebreak-proc identity)))
+(define quotes-and-dashes (compose1 smart-quotes smart-dashes))
 
 (define raw-pdf-font-size 12)
 (define pdf-font-size (format "~apt" raw-pdf-font-size))
@@ -62,12 +66,10 @@
                 (q [(font-size ,(pdf-adjust-font-size 0.9))]
                    ,type)
                 (q [(display "block")
-                    (font-size ,pdf-font-size)
                     (hyphenate "true")]
                   ,para-break
                   ,(format "~a, " authors)
-                  (q [(font-italic "true")
-                      (font-size ,pdf-font-size)]
+                  (q [(font-italic "true")]
                      ,(format " ~a. " title)))
                   ,(format "~a. " venue)
                   ,(if (not (eq? link ""))
@@ -104,7 +106,7 @@
                      ,start-end)
                  ,(when elements
                   `(q [(display "block")
-                       (font-size ,(pdf-adjust-font-size 0.85))
+                       (font-size ,(pdf-adjust-font-size 0.9))
                        (hyphenate "true")
                        (line-align "justify")
                        (inset-left "10")
@@ -117,7 +119,10 @@
                   (h4 ,company)
                   (h5 (em ,position))
                   (h6 ,start-end)
-                  (p ,@elements))])))
+                  ,@(decode-elements
+                      elements
+                      #:txexpr-elements-proc smart-paragraphs
+                      #:string-proc quotes-and-dashes))])))
 
 (define-tag-function (link attrs elems)
   (let* ([hash-attrs (attrs->hash attrs)]

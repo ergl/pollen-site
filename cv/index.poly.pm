@@ -58,13 +58,15 @@
                 #:company "Google Summer of Code"
                 #:position "Alumni"]{
 
-    Improved run-time performance of the Lasp programming language by applying deforestation techniques and control flow analysis.}}
+    Improved run-time performance of the Lasp programming language by applying
+    deforestation techniques and control flow analysis.}}
 
     ◊item{◊job[#:start "Summer 2015"
                #:company "H4ckademy Programming School"
                #:position "Alumni"]{
 
-    Co-designed and implemented a domain-specific language in Python that would let users write unit test against streaming APIs.}}
+    Co-designed and implemented a domain-specific language in Python that would
+    let users write unit test against streaming APIs.}}
 }}
 
 ◊section[#:title "Publications"]{◊itemize{
