@@ -57,6 +57,7 @@
          [authors (hash-ref hash-attrs 'authors)]
          [date (hash-ref hash-attrs 'date)]
          [link (hash-ref hash-attrs 'link "")]
+         [link-url (hash-ref hash-attrs 'link-url "")]
          [place (hash-ref hash-attrs 'place "")]
          [venue (hash-ref hash-attrs 'venue)]
          [type (hash-ref hash-attrs 'type)])
@@ -72,8 +73,9 @@
                   (q [(font-italic "true")]
                      ,(format " ~a. " title)))
                   ,(format "~a. " venue)
-                  ,(if (not (eq? link ""))
-                    `(q [(link ,link) (font-color "#EA5A5B")] ,link)
+                  ,(if (not (eq? link-url ""))
+                    (let ([link-text (if (eq? link "") link-url link)])
+                      `(q [(link ,link-text) (font-color "#EA5A5B")] ,link))
                     `(q ""))
                   ,para-break)]
 

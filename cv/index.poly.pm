@@ -75,7 +75,9 @@
             #:title "UniStore: A fault-tolerant marriage of causal and strong consistency"
             #:authors "Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei"
             #:date "2021"
-            #:venue "USENIX ATC '21 (to appear)"
+            #:link "[PDF]"
+            #:link-url "https://www.usenix.org/system/files/atc21-bravo.pdf"
+            #:venue "USENIX ATC '21"
             #:type "Conference"
         ]
     }
@@ -83,9 +85,10 @@
     ◊item{
         ◊publication[
             #:title "Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages"
-            #:authors "Borja de Régil, Christopher Meiklejohn"
+            #:authors "Borja de Régil and Christopher Meiklejohn"
             #:date "2016"
-            #:link "http://arxiv.org/abs/1609.01068"
+            #:link "[arXiv preprint]"
+            #:link-url "http://arxiv.org/abs/1609.01068"
             #:place "Amsterdam, Netherlands"
             #:venue "AGERE 2016"
             #:type "Workshop"
