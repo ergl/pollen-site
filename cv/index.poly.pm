@@ -29,7 +29,7 @@
 ◊section[#:id "jobs" #:title "Experience"]{◊itemize{
     ◊item{◊job[#:start "June 2020"
                #:end "Current"
-               #:position "Distributed systems programmer"
+               #:position "Research/Development Engineer"
                #:company "Imdea Software Institute"]{}}
 
     ◊item{◊job[#:start "October 2016"
