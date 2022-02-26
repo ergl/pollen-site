@@ -75,7 +75,7 @@
                   ,(format "~a. " venue)
                   ,(if (not (eq? link-url ""))
                     (let ([link-text (if (eq? link "") link-url link)])
-                      `(q [(link ,link-text) (font-color "#EA5A5B")] ,link))
+                      `(q [(link ,link-url) (font-color "#EA5A5B")] ,link-text))
                     `(q ""))
                   ,para-break)]
 
@@ -85,7 +85,7 @@
                    (em ,(format " ~a." title))
                    ,(format " ~a. " venue)
                    ,(if (not (eq? link ""))
-                      `(a [(href ,link)] ,link)
+                      `(a [(href ,link-url)] ,link)
                       `"")))])))
 
 (define-tag-function (job attrs elements)
