@@ -9,6 +9,28 @@ You thought I was going to tell you about my life? Well, maybe some other time.
 In the meantime, please enjoy my professional life detailed below, or check out
 ◊l["/cv"]{my CV} (also in ◊l["/cv/index.pdf"]{pdf form}).
 
+◊h3{Publications}
+
+◊; TODO(borja): Add command for articles, see Chris' website
+◊; http://christophermeiklejohn.com/publications.html
+◊; for formatting ideas
+◊ul{
+    ◊li{
+        Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei. ◊strong{UniStore: A fault-tolerant marriage of causal and strong consistency}. USENIX ATC '21 ◊l["https://www.usenix.org/system/files/atc21-bravo.pdf" #:ext #t]{[PDF]}. Extended version available on ◊l["https://arxiv.org/abs/2106.00344" #:ext #t]{arXiv}.
+    }
+    ◊li{
+        Borja de Régil and Christopher S. Meiklejohn. ◊strong{Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages}. Draft, published Sep 2016. Preprint available on ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{arXiv}.
+    }
+}
+
+◊h3{Talks}
+
+◊ul{
+    ◊li{
+        AGERE 2016, colocated with SPLASH 2016: Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages. ◊l["https://2016.splashcon.org/details/agere2016/3/Dynamic-Path-Contraction-for-Distributed-Dataflow-Languages" #:ext #t]{(link)}
+    }
+}
+
 ◊h3{Open Source Projects}
 
 ◊ul{
@@ -38,28 +60,6 @@ In the meantime, please enjoy my professional life detailed below, or check out
     }
     ◊li{
         ◊l["https://github.com/Pysellus/pysellus" #:ext #t]{pysellus}: A Python library to monitor of data streams and perform tests against them.
-    }
-}
-
-◊h3{Publications}
-
-◊; TODO(borja): Add command for articles, see Chris' website
-◊; http://christophermeiklejohn.com/publications.html
-◊; for formatting ideas
-◊ul{
-    ◊li{
-        Manuel Bravo, Alexey Gotsman, Borja de Régil and Hengfeng Wei. ◊strong{UniStore: A fault-tolerant marriage of causal and strong consistency}. USENIX ATC '21 ◊l["https://www.usenix.org/system/files/atc21-bravo.pdf" #:ext #t]{[PDF]}. Extended version available on ◊l["https://arxiv.org/abs/2106.00344" #:ext #t]{arXiv}.
-    }
-    ◊li{
-        Borja de Régil and Christopher S. Meiklejohn. ◊strong{Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages}. Draft, published Sep 2016. Preprint available on ◊l["http://arxiv.org/abs/1609.01068" #:ext #t]{arXiv}.
-    }
-}
-
-◊h3{Talks}
-
-◊ul{
-    ◊li{
-        AGERE 2016, colocated with SPLASH 2016: Dynamic Path Contraction for Distributed, Dynamic Dataflow Languages. ◊l["https://2016.splashcon.org/details/agere2016/3/Dynamic-Path-Contraction-for-Distributed-Dataflow-Languages" #:ext #t]{(link)}
     }
 }
 
