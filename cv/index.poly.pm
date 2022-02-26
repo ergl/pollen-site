@@ -14,27 +14,19 @@
 
 ◊section{
     ◊text{
-        I am interested in writing fast and correct distributed systems.
+        Making strong consistency scale.
     }
 }
 
 ◊section[#:title "Areas of Interest"]{
     ◊itemize{
-        ◊item{Distributed Systems}
-        ◊item{Databases}
-        ◊item{Conflict-Free Replicated Data Types (CRDTs)}
+        ◊item{Distributed and Storage Systems}
+        ◊item{Strong (consensus) and Weak Consistency (CRDTs)}
+        ◊item{Thread-per-core programming language runtimes}
     }
 }
 
-◊section[#:title "Skills"]{
-    ◊itemize{
-        ◊item{◊skill[#:level "Professional Experience"]{Erlang, Bash, Javascript (Node)}}
-        ◊item{◊skill[#:level "Fluent"]{C, Java, Python, Pony}}
-        ◊item{◊skill[#:level "Familiar"]{OCaml, Clojure, R}}
-    }
-}
-
-◊section[#:id "jobs" #:title "Previous Experience"]{◊itemize{
+◊section[#:id "jobs" #:title "Experience"]{◊itemize{
     ◊item{◊job[#:start "June 2020"
                #:end "Current"
                #:position "Distributed systems programmer"
@@ -54,19 +46,20 @@
 
     The work was funded by an ERC grant ◊em{A Rigorous Approach to Consistency in Cloud Databases}.}}
 
-    ◊item{◊job[#:start "Summer 2016"
-                #:company "Google Summer of Code"
-                #:position "Alumni"]{
+    ◊item{◊job[#:start "May 2016"
+               #:end "Aug 2016"
+               #:company "Google Summer of Code, BEAM Community"
+               #:position "Participant"]{
 
     Improved run-time performance of the Lasp programming language by applying
     deforestation techniques and control flow analysis.}}
 
-    ◊item{◊job[#:start "Summer 2015"
-               #:company "H4ckademy Programming School"
-               #:position "Alumni"]{
+    ◊; ◊item{◊job[#:start "Summer 2015"
+    ◊;            #:company "H4ckademy Programming School"
+    ◊;            #:position "Alumni"]{
 
-    Co-designed and implemented a domain-specific language in Python that would
-    let users write unit test against streaming APIs.}}
+    ◊; Co-designed and implemented a domain-specific language in Python that would
+    ◊; let users write unit test against streaming APIs.}}
 }}
 
 ◊section[#:title "Publications"]{◊itemize{
@@ -78,7 +71,7 @@
             #:link "[PDF]"
             #:link-url "https://www.usenix.org/system/files/atc21-bravo.pdf"
             #:venue "USENIX ATC '21"
-            #:type "Conference"
+            #:type "Conferences"
         ]
     }
 
@@ -91,19 +84,27 @@
             #:link-url "http://arxiv.org/abs/1609.01068"
             #:place "Amsterdam, Netherlands"
             #:venue "AGERE 2016"
-            #:type "Workshop"
+            #:type "Workshops"
             ]
     }
 }}
 
+◊section[#:title "Skills"]{
+    ◊itemize{
+        ◊item{◊skill[#:level "Professional Experience"]{Go, Erlang, R, shell scripting}}
+        ◊item{◊skill[#:level "Fluent"]{Java, Python, Pony, Javascript}}
+        ◊item{◊skill[#:level "Familiar"]{C, OCaml, Clojure, Rust}}
+    }
+}
+
 ◊section[#:title "Education"]{◊itemize{◊item{
-    ◊class[#:start "Class of 2020"
+    ◊class[#:start "June 2020"
            #:name "B.S. in Computer Science"
            #:place "Complutense University of Madrid"
            #:location "Madrid"]{}
 }}}
 
 ◊section[#:title "Languages"]{◊itemize{
-    ◊item{◊language[#:level "Native"]{Spanish}}
     ◊item{◊language[#:level "Full professional proficiency"]{English}}
+    ◊item{◊language[#:level "Native"]{Spanish}}
 }}

@@ -151,10 +151,16 @@
 
 (define-tag-function (skill attrs elems)
   (let* ([hash-attrs (attrs->hash attrs)]
-         [level (hash-ref hash-attrs 'level)])
+         [level (hash-ref hash-attrs 'level #f)])
     (case (current-poly-target)
-      [(pdf) `(q [] ,@elems (q [(font-italic "true")] ,(format " (~a)" level)))]
-      [else `(@ ,@elems " (" (em (strong ,level)) ")")])))
+      [(pdf)
+        (if level
+            `(q [] ,@elems (q [(font-italic "true")] ,(format " (~a)" level)))
+            `(q [] ,@elems))]
+      [else
+        (if level
+            `(@ ,@elems " (" (em (strong ,level)) ")")
+            `(@ ,@elems))])))
 
 (define-tag-function (section attrs elems)
   (let* ([hash-attrs (attrs->hash attrs)]
