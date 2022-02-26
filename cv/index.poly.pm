@@ -26,23 +26,33 @@
     }
 }
 
+◊section[#:title "Education"]{◊itemize{◊item{
+    ◊class[#:start "June 2020"
+           #:name "B.S. in Computer Science"
+           #:place "Complutense University of Madrid"
+           #:location "Madrid"]{}
+}}}
+
 ◊section[#:id "jobs" #:title "Experience"]{◊itemize{
     ◊item{◊job[#:start "June 2020"
                #:end "Current"
                #:position "Research/Development Engineer"
-               #:company "Imdea Software Institute"]{}}
+               #:company "Imdea Software Institute"]{
+
+    Developer of Unistore, a fault-tolerant data store combining causal and strong
+    consistency. Developed significant experience with fault-tolerant distributed
+    consensus protocols (Paxos) and Conflict-free replicated data types (CRDTs).
+
+    The work was funded by an ERC grant ◊em{A Rigorous Approach to Consistency in Cloud Databases}.}}
 
     ◊item{◊job[#:start "October 2016"
                #:end "May 2020"
                #:position "Research Intern"
                #:company "Imdea Software Institute"]{
 
-    Implemented and evaluated a new transactional protocol for strongly consistent
-    distributed databases; implemented a relational (SQL) model adapter for key-value
-    distributed storage; tested distributed programs via property checking (model
-    checking); implemented an open-source library for batching and multiplexing
-    TCP connections, which allowed to scale systems to handle up to 2.5 times more
-    requests per second.
+    Developer of fastPSI, a transactional protocol for databases with flexible
+    consistency semantics. Developed experience with property-based testing and TCP
+    performance on high-latency scenarios. Extensive design of evaluation benchmarks.
 
     The work was funded by an ERC grant ◊em{A Rigorous Approach to Consistency in Cloud Databases}.}}
 
@@ -51,8 +61,11 @@
                #:company "Google Summer of Code, BEAM Community"
                #:position "Participant"]{
 
-    Improved run-time performance of the Lasp programming language by applying
-    deforestation techniques and control flow analysis.}}
+    Improved the run-time performance of
+    ◊link[#:addr "https://github.com/lasp-lang/lasp"]{Lasp}, a programming language for
+    distributed, eventually consistent computations. Reduced end-to-end latency by
+    applying deforestation techniques and control flow analysis in distributed dataflow
+    scenarios.}}
 
     ◊; ◊item{◊job[#:start "Summer 2015"
     ◊;            #:company "H4ckademy Programming School"
@@ -96,13 +109,6 @@
         ◊item{◊skill[#:level "Familiar"]{C, OCaml, Clojure, Rust}}
     }
 }
-
-◊section[#:title "Education"]{◊itemize{◊item{
-    ◊class[#:start "June 2020"
-           #:name "B.S. in Computer Science"
-           #:place "Complutense University of Madrid"
-           #:location "Madrid"]{}
-}}}
 
 ◊section[#:title "Languages"]{◊itemize{
     ◊item{◊language[#:level "Full professional proficiency"]{English}}
