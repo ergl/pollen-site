@@ -1,1 +1,0 @@
-◊(render-pdf doc #false)
